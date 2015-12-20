@@ -1,44 +1,43 @@
 extends layout
 
 block content
-    div.menu
-      div.values
-        div#city
-        table.information
-          tr
-            td b
-                Weather:
-          tr
-            td b
-                Temperature:
-            td div#temp
-        button#more_information Click for more information
-        table.more_information
+    div(class="menu")
+      div(class="values")
+        div(id="city")
+        table(class="information")
           tr
             td
-              b
-                Wind speed:
-            td div#wind_speed
+              Weather
+            td
+              div(id="")
           tr
             td
-              b
-                Wind direction:
-            td div#wind_direction
+              Temperature
+            td
+              div(id="temp")
+        button(id="more_information") Click for more information
+        table(class="more_information")
           tr
             td
-              b
-                Pressure:
-            td div#pressure
-			
-          div.input
+              Wind speed
+            td 
+              div(id="wind_speed")
+          tr
+            td
+              Wind direction
+            td
+              div(id="wind_direction")
+          tr
+            td
+              Pressure
+            td
+              div(id="pressure")
+          div(class="input")
             label(for="city")
               City
-            input#weather_city(type="text" name="city")
+            input(id="weather_city", type="text", name="city")
             label(for="units")
               Units
-            input#units_metric(type="radio" name="units" value="metrics")
-              Metric
-            input#units_imperial(type="radio" name="units" value="imperial")
-              Imperial
-            button#change(type="submit")
-              Change
+            input(id="units_metric", type="radio", name="units", value="metrics") 
+            input(id="units_imperial", type="radio", name="units", value="imperial")
+            button(id="change", type="submit") Search
