@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    div.menu
+      div.values
+        div#city
+        table.information
+          tr
+            td b
+                Weather:
+          tr
+            td b
+                Temperature:
+            td div#temp
+        button#more_information Click for more information
+        table.more_information
+          tr
+            td
+              b
+                Wind speed:
+            td div#wind_speed
+          tr
+            td
+              b
+                Wind direction:
+            td div#wind_direction
+          tr
+            td
+              b
+                Pressure:
+            td div#pressure
+			
+          div.input
+            label(for="city")
+              City
+            input#weather_city(type="text" name="city")
+            label(for="units")
+              Units
+            input#units_metric(type="radio" name="units" value="metrics")
+              Metric
+            input#units_imperial(type="radio" name="units" value="imperial")
+              Imperial
+            button#change(type="submit")
+              Change

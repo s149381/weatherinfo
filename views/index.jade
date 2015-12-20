@@ -2,4 +2,18 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p A website for weather
+  div
+    h2 Please login(Not possible)
+    form#formUser(name="user",method="post",action="/user")
+      input#inputUserName(type="text", placeholder="username", name="username")
+      input#inputUserPassword(type="password", placeholder="password", name="userpassword")
+      button#btnSubmit(type="login") submit
+  div
+    h2 Or register
+    form#formAddUser(name="adduser",method="post",action="/adduser")
+      input#inputUserName(type="text", placeholder="username", name="username")
+      input#inputUserPassword(type="password", placeholder="password", name="userpassword")
+      button#btnSubmit(type="login") submit
+  div
+    button#btnRemoveAllUsers(action="/removeallusers") Remove all users
